@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car List</title>
+</head>
+<body>
+	<div>
+			<h2>Car List</h2> 		
+	</div>
+
+	<a href="/home">Back</a>|
+	<a href="/logout">Logout</a><br>
+	<a href="/home/newCar">Create</a> 
+
+	<table border="1">
+		<tr>
+			<td>Model</td>
+			<td>CarName</td>
+			<td>Price</td>
+			<td>TYPE</td>
+			<td>ACTION</td>
+		</tr>
+	<% for(var i=0; i < carlist.length; i++){ %>
+		<tr>
+			<td><%= carlist[i].id %></td>
+			<td><%= carlist[i].carname %></td>
+			<td><%= carlist[i].price %></td>
+			<td><%= carlist[i].type %></td>
+			<td>
+				<a href="/home/editcar/<%= carlist[i].id %>">EDIT</a> 
+				<a href="/home/deletecar/<%= carlist[i].id %>">Delete</a> 
+				
+			</td>
+		</tr>
+	<%  } %>
+	</table>
+
+</body>
+</html>

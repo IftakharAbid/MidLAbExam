@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+</head>
+<body>
+	<div>
+			<h2>Edit Page</h2> 		
+	</div>
+
+	<a href="/home">Back</a> |
+	<a href="/logout">Logout</a><br>
+	
+	<form method="post">
+		<table>
+			<tr>
+				<td>ID: </td>
+				<td><input type="text"  name="id" value="<%= car.id %>"></td>
+			</tr>
+			<tr>
+				<td>carname: </td>
+				<td><input type="text" name="carname" value="<%= car.carname %>"></td>
+			</tr>
+			<tr>
+				<td>Price: </td>
+				<td><input type="text" name="price" value="<%= car.price %>"></td>
+			</tr>
+			<tr>
+				<td>Type: </td>
+				<td><input type="text" name="type" value="<%= car.type %>"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" name="" value="Update"> 
+				</td>
+			</tr>
+		</table>
+	</form>
+
+
+</body>
+</html>
